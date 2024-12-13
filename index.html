@@ -1464,104 +1464,76 @@
               <!-- Contact Form Start -->
             
               <form
-  id="contactForm"
-  class="form contact-form"
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  style="display: block;"
->
-  <!-- Hidden Required Fields -->
-  <input
-    type="hidden"
-    name="access_key"
-    value="974793f0-a9aa-443c-bd11-68da020b9fb4"
-  />
-  <!-- END Hidden Required Fields -->
-  <div class="container-fluid p-0">
-    <div class="row gx-0">
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name*"
-          required
-        />
-      </div>
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input
-          type="text"
-          name="company"
-          placeholder="Company Name"
-        />
-      </div>
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address*"
-          required
-        />
-      </div>
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number*"
-          required
-        />
-      </div>
-      <div class="col-12 form__item animate-in-up">
-        <textarea
-          name="message"
-          placeholder="A Few Words*"
-          required
-        ></textarea>
-      </div>
-      <div class="col-12 form__item animate-in-up">
-        <button
-          class="btn btn-default btn-hover btn-hover-accent"
-          type="submit"
-        >
-          <span class="btn-caption">Send Message</span>
-          <i class="ph-bold ph-paper-plane-tilt"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</form>
-
-<!-- Hidden div to display after submission -->
-<div
-  id="successMessage"
-  class="socials-cards__card"
-  style="display: none; text-align: center; margin-top: 20px;"
->
-  <p>Thanks for your message. I'll get back as soon as possible.</p><br/>
-  <p>Until Check Our Brochure</p>
-  <i class="ph-light ph-file-pdf" style="font-size: 50px; margin-bottom: 10px;"></i>
-  <a
-    class="socials-cards__link"
-    href="\img\Freelancing Broacher.pdf"
-    target="_blank"
-    style="font-size: 20px; font-weight: bold;"
-  >
-  </a>
-</div>
-
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission
-
-    // Hide the form
-    document.getElementById("contactForm").style.display = "none";
-
-    // Simulate API success (remove this block if using actual API response handling)
-    setTimeout(() => {
-      // Show the success message
-      document.getElementById("successMessage").style.display = "block";
-    }, 1000);
-  });
-</script>
+              id="contactForm"
+              class="form contact-form"
+              action="https://api.web3forms.com/submit" method="POST">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="access_key" value="974793f0-a9aa-443c-bd11-68da020b9fb4">
+            
+              <!-- END Hidden Required Fields -->
+              <div class="container-fluid p-0">
+                <div class="row gx-0">
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="text" name="name" placeholder="Your Name*" required />
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="text" name="company" placeholder="Company Name" />
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="email" name="email" placeholder="Email Address*" required />
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="tel" name="phone" placeholder="Phone Number*" required />
+                  </div>
+                  <div class="col-12 form__item animate-in-up">
+                    <textarea name="message" placeholder="A Few Words*" required></textarea>
+                  </div>
+                  <div class="col-12 form__item animate-in-up">
+                    <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
+                      <span class="btn-caption">Send Message</span>
+                      <i class="ph-bold ph-paper-plane-tilt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            
+            <!-- Hidden div to display after submission -->
+            <div
+              id="successMessage"
+              class="socials-cards__card"
+              style="display: none; text-align: center; margin-top: 20px;"
+            >
+              <p>Thanks for your message. I'll get back as soon as possible.</p><br/>
+              <p>Until then, check our brochure</p>
+              <i class="ph-light ph-file-pdf" style="font-size: 50px; margin-bottom: 10px;"></i>
+              <a
+                class="socials-cards__link"
+                href="\img\Freelancing Broacher.pdf"
+                target="_blank"
+                style="font-size: 20px; font-weight: bold;"
+              >
+                View Brochure
+              </a>
+            </div>
+            
+            <script>
+              document.getElementById("contactForm").addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the default form submission behavior
+            
+                // Hide the form after submission
+                document.getElementById("contactForm").style.display = "none";
+            
+                // Simulate a successful API response and show the custom success message after a delay
+                setTimeout(() => {
+                  // Show the success message
+                  document.getElementById("successMessage").style.display = "block";
+                }, 1000);
+            
+                // You can add further AJAX calls here if you'd like to handle the actual form submission without page reload.
+              });
+            </script>
+            
 
 
               <!-- Contact Form End -->
